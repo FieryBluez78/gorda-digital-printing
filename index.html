@@ -323,15 +323,15 @@
             </button>
             <button
               class="filter-btn whitespace-nowrap px-5 py-2 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-brand-600 hover:text-brand-600 font-medium transition-all"
-              data-category="signage"
-            >
-              Signage
-            </button>
-            <button
-              class="filter-btn whitespace-nowrap px-5 py-2 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-brand-600 hover:text-brand-600 font-medium transition-all"
               data-category="apparel"
             >
               Apparel
+            </button>
+            <button
+              class="filter-btn whitespace-nowrap px-5 py-2 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-brand-600 hover:text-brand-600 font-medium transition-all"
+              data-category="promo"
+            >
+              Promo & Marketing
             </button>
           </div>
         </div>
@@ -840,7 +840,7 @@
         },
         {
           id: 3,
-          name: "Acrylic ID Badge",
+          name: "Lanyard & Acrylic ID Card",
           priceStr: "Rp 25.000",
           category: "event",
           stock: 75,
@@ -848,7 +848,7 @@
         },
         {
           id: 4,
-          name: "PVC ID Badge",
+          name: "Lanyard & Acrylic ID Card",
           priceStr: "Rp 20.000",
           category: "event",
           stock: 120,
@@ -857,7 +857,7 @@
         {
           id: 5,
           name: "Plaque",
-          priceStr: "Start from Rp 25.000",
+          priceStr: "Start from Rp 45.000",
           category: "souvenir",
           stock: 50,
           image: "img/Plaque.png",
@@ -865,7 +865,7 @@
         {
           id: 6,
           name: "Heat Press Print",
-          priceStr: "Start from Rp 25.000",
+          priceStr: "Start from Rp 5.000",
           category: "apparel",
           stock: "Pre-order",
           image: "img/Heat_Press_Print.png",
@@ -878,31 +878,23 @@
           stock: 300,
           image: "img/Lanyard_Keychain.png",
         },
-        {
-          id: 8,
-          name: "Wooden Letter",
-          priceStr: "Start Rp 15.000/Letter",
-          category: "signage",
-          stock: "Custom",
-          image: "img/Wooden_Letter.png",
-        },
-        {
-          id: 9,
-          name: "Acrylic Letter",
-          priceStr: "Start Rp 17.000/Letter",
-          category: "signage",
-          stock: "Custom",
-          image: "img/Acrylic_Letter.png",
-        },
 
         // Additional digital printing items (total 25)
         {
           id: 10,
           name: "Custom Print Tumbler",
-          priceStr: "Rp 45.000",
+          priceStr: "Rp 60.000",
           category: "souvenir",
           stock: 60,
           image: "img/Custom_Print_Tumbler.png",
+        },
+        {
+          id: 26,
+          name: "Brochure / Flyer (A4)",
+          priceStr: "Rp 2.500/sheet",
+          category: "promo",
+          stock: 500,
+          image: "img/brochure_flyer_(a4).png",
         },
         {
           id: 11,
@@ -921,6 +913,21 @@
           image: "img/Custom T-Shirt (DTF).png",
         },
         {
+          id: 26,
+          name: "A3+ Print Poster",
+          priceStr: "Rp 4.000",
+          category: "promo",
+          stock: "Unlimited",
+          image: "img/a3+_art_cartoon_poster.png",
+        },
+        {
+          id: 26,
+          name: "Custom Pin Badge (58mm)",
+          priceStr: "Rp 4.000",
+          category: "souvenir",
+          stock: 500,
+          image: "img/Custom_Pin_Badge_(58mm).png",
+        },        {
           id: 13,
           name: "Custom Trucker Hat",
           priceStr: "Rp 25.000",
@@ -931,7 +938,7 @@
         {
           id: 14,
           name: "Printed Canvas Tote Bag",
-          priceStr: "Rp 35.000",
+          priceStr: "Rp 25.000",
           category: "souvenir",
           stock: 140,
           image: "img/Printed_Canvas_Tote_Bag.png",
@@ -946,11 +953,19 @@
         },
         {
           id: 26,
-          name: "Custom Pin Badge (58mm)",
-          priceStr: "Rp 4.000",
-          category: "souvenir",
-          stock: 500,
-          image: "img/Custom_Pin_Badge_(58mm).png",
+          name: "Die-Cut Vinyl Sticker (A3)",
+          priceStr: "Rp 15.000",
+          category: "promo",
+          stock: "Unlimited",
+          image: "img/die-cut_vinyl_sticker_(a3).png",
+        },
+        {
+          id: 26,
+          name: "Chromo Sticker (A3)",
+          priceStr: "Rp 10.000",
+          category: "promo",
+          stock: "Unlimited",
+          image: "img/chromo_sticker_(a3).png",
         },
       ];
 
@@ -960,8 +975,8 @@
         const colors = {
           souvenir: { bg: "031765", text: "ffffff" }, // Deep Navy
           event: { bg: "0071ad", text: "ffffff" }, // Vibrant Medium Blue
-          signage: { bg: "91dced", text: "031765" }, // Light Sky Blue
           apparel: { bg: "147ba8", text: "ffffff" }, // Mid-dark blue
+          promo: { bg: "00a6fb", text: "ffffff" }, // Bright Sky Blue
         };
         const col = colors[category] || { bg: "64748b", text: "ffffff" };
         const cleanName = encodeURIComponent(
