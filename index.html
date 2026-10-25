@@ -1,0 +1,1294 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gorda Digital Printing | Your Printing Solutions</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#e6f6fd", // Very light tint of sky blue
+                100: "#91dced", // Light Sky Blue from logo
+                200: "#5abdd6",
+                300: "#2b9bc2",
+                400: "#147ba8",
+                500: "#0071ad", // Vibrant Medium Blue from logo
+                600: "#006198", // Adjusted slightly darker for primary buttons
+                700: "#004f80",
+                800: "#031765", // Deep Navy Blue from logo
+                900: "#02104a",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c7c7cc;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4f46e5;
+      }
+
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+      }
+
+      /* Hide scrollbar for category filter but allow scrolling */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-slate-800 bg-slate-50 antialiased">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full z-50 glass-nav border-b border-slate-200 transition-all duration-300"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div
+            class="flex-shrink-0 flex items-center gap-2 cursor-pointer"
+            onclick="window.scrollTo(0, 0)"
+          >
+            <img
+              src="favicon.png"
+              alt="Gorda Digital Printing Logo"
+              class="h-12 w-auto"
+            />
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-slate-600 hover:text-brand-600 font-medium transition-colors"
+              >Home</a
+            >
+            <a
+              href="#catalogue"
+              class="text-slate-600 hover:text-brand-600 font-medium transition-colors"
+              >Catalog</a
+            >
+            <a
+              href="#services"
+              class="text-slate-600 hover:text-brand-600 font-medium transition-colors"
+              >Services</a
+            >
+            <a
+              href="#contact"
+              class="text-slate-600 hover:text-brand-600 font-medium transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-slate-600 hover:text-brand-600 focus:outline-none p-2"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg"
+      >
+        <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+          <a
+            href="#home"
+            class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-50"
+            >Home</a
+          >
+          <a
+            href="#catalogue"
+            class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-50"
+            >Catalog</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-50"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-brand-50"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section
+      id="home"
+      class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-white"
+    >
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <!-- Merchandise Image Background -->
+        <div
+          class="absolute inset-0 bg-[url('img/bg_1170x780.png')] bg-cover bg-center opacity-60"
+        ></div>
+        <!-- Faded Texture Overlays -->
+        <div class="absolute inset-0 backdrop-blur-[2px]"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+          <!-- Text Content -->
+          <div class="lg:col-span-6 text-center lg:text-left mb-12 lg:mb-0">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-sm font-semibold mb-6"
+            >
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-brand-600"
+                ></span>
+              </span>
+              Premium Printing Quality
+            </div>
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 leading-tight mb-6"
+            >
+              The Right Solution for Your
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-brand-800 via-brand-500 to-brand-100"
+                >Digital Printing</span
+              >
+              Needs
+            </h1>
+            <p
+              class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            >
+              Welcome to <strong>Gorda Digital Printing</strong>. We provide
+              modern, fast, and high-quality printing services tailored for your
+              personal, event, and corporate needs.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <a
+                href="#catalogue"
+                class="px-8 py-4 rounded-xl bg-brand-600 text-white font-medium hover:bg-brand-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-center"
+              >
+                View Product Catalog
+              </a>
+              <a
+                href="#contact"
+                class="px-8 py-4 rounded-xl bg-white text-slate-700 border-2 border-slate-200 font-medium hover:border-brand-600 hover:text-brand-600 transition-all duration-300 text-center flex items-center justify-center gap-2"
+              >
+                Contact Us <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Image Grid -->
+          <div class="lg:col-span-6 relative">
+            <!-- Decorative background blob -->
+            <div
+              class="absolute -top-10 -right-10 w-72 h-72 bg-brand-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"
+            ></div>
+            <div
+              class="absolute -bottom-10 -left-10 w-72 h-72 bg-brand-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"
+            ></div>
+
+            <div class="grid grid-cols-2 gap-4 relative z-10">
+              <img
+                src="img/home1_750x500.png"
+                alt="Lanyard"
+                class="rounded-2xl shadow-xl w-full h-64 object-cover hover:scale-[1.02] transition-transform duration-300"
+              />
+              <div class="grid grid-rows-2 gap-4">
+                <img
+                  src="img/Home2_400x240.png"
+                  alt="Keychain"
+                  class="rounded-2xl shadow-xl w-full h-full object-cover hover:scale-[1.02] transition-transform duration-300"
+                />
+                <img
+                  src="img/Home3_400x240.png"
+                  alt="Tumbler"
+                  class="rounded-2xl shadow-xl w-full h-full object-cover hover:scale-[1.02] transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalogue Section -->
+    <section id="catalogue" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4"
+          >
+            Product Catalog
+          </h2>
+          <p class="text-slate-600 text-lg">
+            Discover a wide range of high-quality printed products to meet all
+            your needs.
+          </p>
+        </div>
+
+        <!-- Search and Filter Controls -->
+        <div class="mb-10 space-y-6">
+          <!-- Search Bar -->
+          <div class="max-w-md mx-auto relative">
+            <div
+              class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
+            >
+              <i class="fas fa-search text-slate-400"></i>
+            </div>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search products (e.g., Acrylic, Lanyard)..."
+              class="w-full pl-11 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition-colors shadow-sm bg-white"
+            />
+          </div>
+
+          <!-- Categories -->
+          <div
+            class="flex overflow-x-auto no-scrollbar gap-2 pb-2 justify-start md:justify-center"
+            id="categoryContainer"
+          >
+            <button
+              class="filter-btn active whitespace-nowrap px-5 py-2 rounded-full border border-brand-600 bg-brand-600 text-white font-medium transition-all"
+              data-category="all"
+            >
+              All Products
+            </button>
+            <button
+              class="filter-btn whitespace-nowrap px-5 py-2 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-brand-600 hover:text-brand-600 font-medium transition-all"
+              data-category="souvenir"
+            >
+              Souvenirs
+            </button>
+            <button
+              class="filter-btn whitespace-nowrap px-5 py-2 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-brand-600 hover:text-brand-600 font-medium transition-all"
+              data-category="event"
+            >
+              Office & Event
+            </button>
+            <button
+              class="filter-btn whitespace-nowrap px-5 py-2 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-brand-600 hover:text-brand-600 font-medium transition-all"
+              data-category="signage"
+            >
+              Signage
+            </button>
+            <button
+              class="filter-btn whitespace-nowrap px-5 py-2 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-brand-600 hover:text-brand-600 font-medium transition-all"
+              data-category="apparel"
+            >
+              Apparel
+            </button>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div
+          id="productsGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          <!-- Product Cards will be injected here via JavaScript -->
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div id="emptyState" class="hidden text-center py-20">
+          <i class="fas fa-box-open text-6xl text-slate-300 mb-4"></i>
+          <h3 class="text-xl font-heading font-semibold text-slate-700">
+            No products found
+          </h3>
+          <p class="text-slate-500 mt-2">
+            Try using different keywords or categories.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services & Testimonials Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Services Sub-section -->
+        <div class="mb-24">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2
+              class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4"
+            >
+              Our Services
+            </h2>
+            <p class="text-slate-600 text-lg">
+              We support various activities and events with specialized services
+              tailored to your exact needs.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div
+              class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all duration-300 group"
+            >
+              <div
+                class="w-16 h-16 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300"
+              >
+                <i class="fas fa-calendar-check text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-slate-900 mb-3">
+                Events
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Providing complete printing supplies to ensure the success of
+                your events, from seminars and workshops to large concerts.
+              </p>
+            </div>
+            <!-- Service 2 -->
+            <div
+              class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all duration-300 group"
+            >
+              <div
+                class="w-16 h-16 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300"
+              >
+                <i class="fas fa-store text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-slate-900 mb-3">
+                Bazaars
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Fulfilling visual promotion needs for your bazaar stand,
+                including banners, brochures, and attractive merchandise.
+              </p>
+            </div>
+            <!-- Service 3 -->
+            <div
+              class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all duration-300 group"
+            >
+              <div
+                class="w-16 h-16 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300"
+              >
+                <i class="fas fa-paint-roller text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-slate-900 mb-3">
+                Custom Decoration
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Custom decorations based on digital printing, such as backdrops,
+                standees, and other visual elements to beautify your space.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials Sub-section -->
+        <div>
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2
+              class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4"
+            >
+              What They Say
+            </h2>
+            <p class="text-slate-600 text-lg">
+              Testimonials from clients who have entrusted their printing needs
+              to us.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div
+              class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative"
+            >
+              <i
+                class="fas fa-quote-left absolute top-6 right-6 text-4xl text-brand-100"
+              ></i>
+              <div class="flex text-yellow-400 mb-4 gap-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-slate-600 italic mb-6 relative z-10 line-clamp-4">
+                "Very fast service and satisfying results for our boarding
+                school event needs. The lanyards and other prints are
+                exceptionally neat. Highly recommended!"
+              </p>
+              <div
+                class="flex items-center gap-4 border-t border-slate-100 pt-4"
+              >
+                <div
+                  class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500"
+                >
+                  <img
+                    src="img/Testimoni1_48x48.png"
+                    alt="GP3"
+                    class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-heading font-semibold text-slate-900">
+                    Gontor Putri 3
+                  </h4>
+                  <p class="text-sm text-slate-500">Event Client</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div
+              class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative"
+            >
+              <i
+                class="fas fa-quote-left absolute top-6 right-6 text-4xl text-brand-100"
+              ></i>
+              <div class="flex text-yellow-400 mb-4 gap-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="text-slate-600 italic mb-6 relative z-10 line-clamp-4">
+                "The quality of lanyards and ID badges for our campus seminar is
+                very precise. Good materials, vibrant non-fading prints, and
+                very student-budget friendly."
+              </p>
+              <div
+                class="flex items-center gap-4 border-t border-slate-100 pt-4"
+              >
+                <img
+                  src="img/Testimoni2_48x48.png"
+                  alt="GP3"
+                  class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500"
+                />
+                <div>
+                  <h4 class="font-heading font-semibold text-slate-900">
+                    UNIDA
+                  </h4>
+                  <p class="text-sm text-slate-500">Campus Client</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div
+              class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative"
+            >
+              <i
+                class="fas fa-quote-left absolute top-6 right-6 text-4xl text-brand-100"
+              ></i>
+              <div class="flex text-yellow-400 mb-4 gap-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-slate-600 italic mb-6 relative z-10 line-clamp-4">
+                "Production of plaques, banners, and all administrative
+                documents was right on time. Modern designs and very sharp print
+                quality. Thank you, Gorda!"
+              </p>
+              <div
+                class="flex items-center gap-4 border-t border-slate-100 pt-4"
+              >
+                <div
+                  class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500"
+                >
+                  <img
+                    src="img/Testimoni3_48x48.png"
+                    alt="GP3"
+                    class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-heading font-semibold text-slate-900">
+                    Annual Exam Committee
+                  </h4>
+                  <p class="text-sm text-slate-500">Institutional Client</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <!-- Contact Info -->
+          <div>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Contact Us
+            </h2>
+            <p class="text-slate-400 text-lg mb-10">
+              Have questions or want to place a bulk order? Don't hesitate to
+              reach out to the Gorda Digital Printing team.
+            </p>
+
+            <div class="space-y-6 mb-10">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-400 shrink-0"
+                >
+                  <i class="fab fa-whatsapp text-2xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold mb-1">WhatsApp</h4>
+                  <a
+                    href="https://wa.me/628132997143"
+                    target="_blank"
+                    class="text-slate-300 hover:text-white transition-colors text-lg inline-block group"
+                  >
+                    +62 813-2997-143
+                    <span
+                      class="inline-block transform transition-transform group-hover:translate-x-1"
+                      ><i
+                        class="fas fa-arrow-right text-sm ml-1 text-brand-400"
+                      ></i
+                    ></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-400 shrink-0"
+                >
+                  <i class="fab fa-instagram text-2xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold mb-1">Instagram</h4>
+                  <a
+                    href="https://www.instagram.com/gdpgorda/"
+                    target="_blank"
+                    class="text-slate-300 hover:text-white transition-colors text-lg inline-block group"
+                  >
+                    @gdpgorda
+                    <span
+                      class="inline-block transform transition-transform group-hover:translate-x-1"
+                      ><i
+                        class="fas fa-arrow-right text-sm ml-1 text-brand-400"
+                      ></i
+                    ></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-400 shrink-0"
+                >
+                  <i class="fas fa-map-marker-alt text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold mb-1">Our Location</h4>
+                  <p class="text-slate-300 leading-relaxed">
+                    Pondok Modern Darussalam Gontor 2 Putera<br />
+                    East Java, Indonesia
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/628132997143?text=Hello%20Gorda%20Digital%20Printing,%20I%20would%20like%20to%20ask..."
+              target="_blank"
+              class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#25D366]/30"
+            >
+              <i class="fab fa-whatsapp text-xl"></i> Chat via WhatsApp
+            </a>
+          </div>
+
+          <!-- Google Maps Embedded -->
+          <div
+            class="rounded-2xl overflow-hidden shadow-2xl h-80 lg:h-auto min-h-[400px] bg-slate-800 border border-slate-700 p-2"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.8878119824194!2d111.4578103108935!3d-7.9067874920835095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e797566935729b7%3A0x6528662bf74ac3e0!2sPondok%20Modern%20Darussalam%20Gontor%202%20Putera!5e0!3m2!1sid!2sid!4v1786635825060!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Chatbot Widget -->
+    <div id="ai-chat-widget" class="fixed bottom-6 right-6 z-50">
+      <!-- Chat Window -->
+      <div
+        id="chat-window"
+        class="hidden flex-col w-[340px] sm:w-[380px] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden mb-4 transition-all duration-300 transform origin-bottom-right"
+      >
+        <!-- Header -->
+        <div
+          class="bg-brand-600 text-white p-4 flex justify-between items-center"
+        >
+          <div class="flex items-center gap-2">
+            <div
+              class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"
+            >
+              <i class="fas fa-robot text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-sm leading-tight">
+                Gorda AI Assistant
+              </h4>
+              <p class="text-xs text-brand-100">Powered by Gemini</p>
+            </div>
+          </div>
+          <button
+            id="close-chat"
+            class="text-white hover:text-brand-200 focus:outline-none transition-colors"
+          >
+            <i class="fas fa-times text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Messages Area -->
+        <div
+          id="chat-messages"
+          class="p-4 h-80 overflow-y-auto flex flex-col gap-4 bg-slate-50"
+        >
+          <!-- Bot Greeting -->
+          <div class="flex gap-2 w-full max-w-[90%]">
+            <div
+              class="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0 mt-1"
+            >
+              <i class="fas fa-robot text-xs"></i>
+            </div>
+            <div
+              class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm text-slate-700 border border-slate-100 leading-relaxed"
+            >
+              Hello! 👋 I'm Gorda AI. I can help you find products, check
+              prices, or learn about our printing services. How can I help you
+              today?
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="p-3 border-t border-slate-200 bg-white">
+          <form id="chat-form" class="flex items-center gap-2">
+            <input
+              type="text"
+              id="chat-input"
+              placeholder="Ask about our products..."
+              class="flex-grow px-4 py-2.5 bg-slate-100 border border-transparent focus:bg-white focus:border-brand-600 focus:ring-0 rounded-full text-sm outline-none transition-all"
+              required
+            />
+            <button
+              type="submit"
+              class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center hover:bg-brand-700 transition-colors shrink-0 focus:outline-none"
+            >
+              <i class="fas fa-paper-plane text-sm -ml-0.5 mt-0.5"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Toggle Button -->
+      <button
+        id="chat-toggle"
+        class="w-14 h-14 rounded-full bg-brand-600 border border-brand-500 flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-brand-600/40 hover:bg-brand-700 hover:scale-110 active:scale-95 transition-all duration-300 ml-auto focus:outline-none group overflow-hidden"
+      >
+        <img
+          src="logo GPP_2.png"
+          alt="Gorda AI"
+          class="w-10 h-10 object-contain group-hover:scale-110 transition-transform brightness-0 invert"
+          onerror="
+            this.outerHTML =
+              '<i class=\'fas fa-robot text-2xl text-white group-hover:rotate-12 transition-transform\'></i>'
+          "
+        />
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div
+            class="flex items-center gap-2 cursor-pointer"
+            onclick="window.scrollTo(0, 0)"
+          >
+            <img
+              src="favicon.png"
+              alt="Gorda Digital Printing Logo"
+              class="h-8 w-auto grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            />
+          </div>
+          <div class="text-center md:text-left text-sm">
+            &copy; <span id="year"></span> Gorda Digital Printing. All rights
+            reserved.
+          </div>
+          <div class="flex gap-4">
+            <a href="#home" class="hover:text-white transition-colors">Home</a>
+            <a href="#catalogue" class="hover:text-white transition-colors"
+              >Catalog</a
+            >
+            <a href="#services" class="hover:text-white transition-colors"
+              >Services</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script>
+      // Set Year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Navbar Scroll Effect
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 10) {
+          nav.classList.add("shadow-md");
+          nav.classList.remove("border-b", "border-slate-200");
+        } else {
+          nav.classList.remove("shadow-md");
+          nav.classList.add("border-b", "border-slate-200");
+        }
+      });
+
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // --- CATALOGUE DATA (25 Products) ---
+      const products = [
+        // User requested items
+        {
+          id: 1,
+          name: "Acrylic Keychain",
+          priceStr: "Rp 6.000",
+          category: "souvenir",
+          stock: 150,
+          image: "img/Acrylic_Keychain.png",
+        },
+        {
+          id: 2,
+          name: "Lanyard",
+          priceStr: "Rp 15.000",
+          category: "event",
+          stock: 200,
+          image: "img/Lanyard.png",
+        },
+        {
+          id: 3,
+          name: "Acrylic ID Badge",
+          priceStr: "Rp 25.000",
+          category: "event",
+          stock: 75,
+          image: "img/Acrylic_ID_Badge.png",
+        },
+        {
+          id: 4,
+          name: "PVC ID Badge",
+          priceStr: "Rp 20.000",
+          category: "event",
+          stock: 120,
+          image: "img/PVC_ID_Badge.png",
+        },
+        {
+          id: 5,
+          name: "Plaque",
+          priceStr: "Start from Rp 25.000",
+          category: "souvenir",
+          stock: 50,
+          image: "img/Plaque.png",
+        },
+        {
+          id: 6,
+          name: "Heat Press Print",
+          priceStr: "Start from Rp 25.000",
+          category: "apparel",
+          stock: "Pre-order",
+          image: "img/Heat_Press_Print.png",
+        },
+        {
+          id: 7,
+          name: "Lanyard Keychain",
+          priceStr: "Rp 7.000",
+          category: "souvenir",
+          stock: 300,
+          image: "img/Lanyard_Keychain.png",
+        },
+        {
+          id: 8,
+          name: "Wooden Letter",
+          priceStr: "Start Rp 15.000/Letter",
+          category: "signage",
+          stock: "Custom",
+          image: "img/Wooden_Letter.png",
+        },
+        {
+          id: 9,
+          name: "Acrylic Letter",
+          priceStr: "Start Rp 17.000/Letter",
+          category: "signage",
+          stock: "Custom",
+          image: "img/Acrylic_Letter.png",
+        },
+
+        // Additional digital printing items (total 25)
+        {
+          id: 10,
+          name: "Custom Print Tumbler",
+          priceStr: "Rp 45.000",
+          category: "souvenir",
+          stock: 60,
+          image: "img/Custom_Print_Tumbler.png",
+        },
+        {
+          id: 11,
+          name: "Custom Ceramic Mug",
+          priceStr: "Rp 20.000",
+          category: "souvenir",
+          stock: 110,
+          image: "img/Custom_Ceramic_Mug.png",
+        },
+        {
+          id: 12,
+          name: "Custom T-Shirt (DTF)",
+          priceStr: "Rp 65.000",
+          category: "apparel",
+          stock: "Pre-order",
+          image: "img/Custom T-Shirt (DTF).png",
+        },
+        {
+          id: 13,
+          name: "Custom Trucker Hat",
+          priceStr: "Rp 25.000",
+          category: "apparel",
+          stock: 85,
+          image: "img/Custom_Trucker_Hat.png",
+        },
+        {
+          id: 14,
+          name: "Printed Canvas Tote Bag",
+          priceStr: "Rp 35.000",
+          category: "souvenir",
+          stock: 140,
+          image: "img/Printed_Canvas_Tote_Bag.png",
+        },
+        {
+          id: 15,
+          name: "Acrylic Business Card",
+          priceStr: "Rp 5.000",
+          category: "event",
+          stock: "Custom",
+          image: "img/Acrylic_Business_Card.png",
+        },
+        {
+          id: 26,
+          name: "Custom Pin Badge (58mm)",
+          priceStr: "Rp 4.000",
+          category: "souvenir",
+          stock: 500,
+          image: "img/Custom_Pin_Badge_(58mm).png",
+        },
+      ];
+
+      // Format string for placeholder URL safely
+      const getPlaceholderUrl = (name, category) => {
+        // Colors mapping by category matching the new brand colors
+        const colors = {
+          souvenir: { bg: "031765", text: "ffffff" }, // Deep Navy
+          event: { bg: "0071ad", text: "ffffff" }, // Vibrant Medium Blue
+          signage: { bg: "91dced", text: "031765" }, // Light Sky Blue
+          apparel: { bg: "147ba8", text: "ffffff" }, // Mid-dark blue
+        };
+        const col = colors[category] || { bg: "64748b", text: "ffffff" };
+        const cleanName = encodeURIComponent(
+          name.split(" ").slice(0, 2).join(" "),
+        );
+        return `https://placehold.co/400x300/${col.bg}/${col.text}?text=${cleanName}`;
+      };
+
+      const productsGrid = document.getElementById("productsGrid");
+      const emptyState = document.getElementById("emptyState");
+      const waNumber = "628132997143";
+
+      // Function to render product cards
+      function renderProducts(items) {
+        productsGrid.innerHTML = "";
+
+        if (items.length === 0) {
+          productsGrid.classList.add("hidden");
+          emptyState.classList.remove("hidden");
+          return;
+        }
+
+        productsGrid.classList.remove("hidden");
+        emptyState.classList.add("hidden");
+
+        items.forEach((product) => {
+          // 1. Buat URL Placeholder (untuk cadangan)
+          const placeholderUrl = getPlaceholderUrl(
+            product.name,
+            product.category,
+          );
+
+          // 2. CEK GAMBAR DARI ARRAY: Mendukung penulisan 'image' ataupun 'Image'
+          const customImg = product.image || product.Image;
+
+          // Jika customImg ada dan tidak kosong, gunakan itu. Jika kosong, gunakan placeholder.
+          const imgUrl =
+            customImg && customImg.trim() !== "" ? customImg : placeholderUrl;
+
+          // Create WA Text
+          const waText = encodeURIComponent(
+            `Hello Gorda Digital Printing, I am interested in ordering this product: ${product.name}. Please provide more information.`,
+          );
+          const waLink = `https://wa.me/${waNumber}?text=${waText}`;
+
+          const stockDisplay =
+            typeof product.stock === "number"
+              ? `${product.stock} pcs`
+              : product.stock;
+
+          const cardHTML = `
+                    <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group h-full">
+                        <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                            <!-- 3. TAMBAHKAN ONERROR: Berjaga-jaga jika gambar tidak ditemukan di folder lokal -->
+                            <img src="${imgUrl}" onerror="this.onerror=null; this.src='${placeholderUrl}';" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur text-xs font-semibold px-2 py-1 rounded-lg text-slate-700 shadow-sm uppercase tracking-wide">
+                                ${product.category.replace("-", " ")}
+                            </div>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1 line-clamp-2">${product.name}</h3>
+                            <div class="text-brand-600 font-bold text-xl mb-3">${product.priceStr}</div>
+                            
+                            <div class="flex items-center gap-2 text-sm text-slate-500 mb-6 mt-auto">
+                                <i class="fas fa-box"></i> Stock: <span class="font-medium text-slate-700">${stockDisplay}</span>
+                            </div>
+                            
+                            <a href="${waLink}" target="_blank" class="w-full block text-center bg-slate-900 hover:bg-brand-600 text-white py-3 px-4 rounded-xl font-medium transition-colors duration-300">
+                                <i class="fab fa-whatsapp mr-1"></i> Order Now
+                            </a>
+                        </div>
+                    </div>
+                `;
+          productsGrid.insertAdjacentHTML("beforeend", cardHTML);
+        });
+      }
+
+      // Initial render
+      let currentFilter = "all";
+      let searchQuery = "";
+      renderProducts(products);
+
+      // Search functionality
+      const searchInput = document.getElementById("searchInput");
+      searchInput.addEventListener("input", (e) => {
+        searchQuery = e.target.value.toLowerCase();
+        filterAndRender();
+      });
+
+      // Filter functionality
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          // Update active state classes
+          filterBtns.forEach((b) => {
+            b.classList.remove(
+              "bg-brand-600",
+              "text-white",
+              "border-brand-600",
+              "active",
+            );
+            b.classList.add("bg-white", "text-slate-600", "border-slate-200");
+          });
+
+          e.target.classList.remove(
+            "bg-white",
+            "text-slate-600",
+            "border-slate-200",
+          );
+          e.target.classList.add(
+            "bg-brand-600",
+            "text-white",
+            "border-brand-600",
+            "active",
+          );
+
+          currentFilter = e.target.getAttribute("data-category");
+          filterAndRender();
+        });
+      });
+
+      // Core filtering logic
+      function filterAndRender() {
+        const filteredProducts = products.filter((p) => {
+          const matchCategory =
+            currentFilter === "all" || p.category === currentFilter;
+          const matchSearch = p.name.toLowerCase().includes(searchQuery);
+          return matchCategory && matchSearch;
+        });
+        renderProducts(filteredProducts);
+      }
+
+      // ==========================================
+      // AI Chatbot Feature Setup
+      // ==========================================
+      const chatToggle = document.getElementById("chat-toggle");
+      const chatWindow = document.getElementById("chat-window");
+      const closeChat = document.getElementById("close-chat");
+      const chatForm = document.getElementById("chat-form");
+      const chatInput = document.getElementById("chat-input");
+      const chatMessages = document.getElementById("chat-messages");
+
+      let chatHistory = [];
+
+      // System prompt context - We inject the real catalog array into the prompt!
+      const getSystemPrompt = () => {
+        const catalogContext = products
+          .map((p) => `- ${p.name}: ${p.priceStr} (Stock: ${p.stock})`)
+          .join("\n");
+        return `You are 'Gorda AI', a helpful, friendly, and concise customer support assistant for Gorda Digital Printing. 
+Your primary goal is to help customers find products, understand services, and encourage them to contact us via WhatsApp (+62 813-2997-143) for custom orders.
+
+Catalog Context (Prices in IDR):
+${catalogContext}
+
+Services Context:
+- Events: Printing supplies for seminars, workshops, concerts.
+- Bazaars: Visual promotion, banners, brochures, merchandise.
+- Custom Decoration: Backdrops, standees.
+
+Location: Pondok Modern Darussalam Gontor 2 Putera, East Java, Indonesia.
+
+Rules:
+1. Keep responses brief (1-3 short paragraphs max).
+2. If a customer asks a complex question, needs custom pricing, or wants to place a large order, kindly direct them to our WhatsApp.
+3. Only recommend products that exist in the catalog context provided above.
+4. Always be polite and professional. 
+5. Use markdown formatting (like **bold** for product names or prices) to make the text easy to read.`;
+      };
+
+      // Toggle chat visibility
+      chatToggle.addEventListener("click", () => {
+        const isHidden = chatWindow.classList.contains("hidden");
+        if (isHidden) {
+          chatWindow.classList.remove("hidden");
+          chatWindow.classList.add("flex");
+          setTimeout(() => chatInput.focus(), 100);
+        } else {
+          chatWindow.classList.add("hidden");
+          chatWindow.classList.remove("flex");
+        }
+      });
+
+      closeChat.addEventListener("click", () => {
+        chatWindow.classList.add("hidden");
+        chatWindow.classList.remove("flex");
+      });
+
+      // Function to append messages to chat UI
+      function appendMessage(text, sender) {
+        const isBot = sender === "bot";
+        const msgDiv = document.createElement("div");
+        msgDiv.className = `flex gap-2 w-full max-w-[90%] ${isBot ? "" : "ml-auto justify-end"}`;
+
+        const botAvatar = `
+                <div class="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0 mt-1">
+                    <i class="fas fa-robot text-xs"></i>
+                </div>
+            `;
+
+        // Basic markdown parser for bold (**) and newlines
+        let formattedText = text
+          .replace(
+            /\*\*(.*?)\*\*/g,
+            '<strong class="text-slate-900">$1</strong>',
+          )
+          .replace(/\*(.*?)\*/g, "<em>$1</em>")
+          .replace(/\n/g, "<br>");
+
+        const msgBubble = `
+                <div class="p-3 rounded-2xl shadow-sm text-sm leading-relaxed ${isBot ? "bg-white text-slate-700 border border-slate-100 rounded-tl-none" : "bg-brand-600 text-white rounded-tr-none"}">
+                    ${formattedText}
+                </div>
+            `;
+
+        msgDiv.innerHTML = isBot ? botAvatar + msgBubble : msgBubble;
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      // Loading indicator function
+      function toggleLoading(show) {
+        if (show) {
+          const loadingDiv = document.createElement("div");
+          loadingDiv.id = "chat-loading";
+          loadingDiv.className = "flex gap-2 w-full max-w-[90%]";
+          loadingDiv.innerHTML = `
+                    <div class="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0 mt-1">
+                        <i class="fas fa-robot text-xs"></i>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 flex items-center gap-1.5 h-[46px]">
+                        <div class="w-1.5 h-1.5 bg-brand-400 rounded-full animate-bounce"></div>
+                        <div class="w-1.5 h-1.5 bg-brand-400 rounded-full animate-bounce" style="animation-delay: 0.15s"></div>
+                        <div class="w-1.5 h-1.5 bg-brand-400 rounded-full animate-bounce" style="animation-delay: 0.3s"></div>
+                    </div>
+                `;
+          chatMessages.appendChild(loadingDiv);
+        } else {
+          const loadingDiv = document.getElementById("chat-loading");
+          if (loadingDiv) loadingDiv.remove();
+        }
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      // Fetch wrapper with exponential backoff for API calls
+      async function fetchWithRetry(url, options, maxRetries = 3) {
+        let retries = 0;
+        while (retries < maxRetries) {
+          try {
+            const response = await fetch(url, options);
+            if (!response.ok) {
+              if (response.status === 429) {
+                // Rate limit hit, wait and backoff
+                const delay =
+                  Math.pow(2, retries) * 1000 + Math.random() * 1000;
+                await new Promise((res) => setTimeout(res, delay));
+                retries++;
+                continue;
+              }
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response;
+          } catch (error) {
+            if (retries >= maxRetries - 1) throw error;
+            const delay = Math.pow(2, retries) * 1000 + Math.random() * 1000;
+            await new Promise((res) => setTimeout(res, delay));
+            retries++;
+          }
+        }
+      }
+
+      // Handle Chat form submission and API integration
+      chatForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const message = chatInput.value.trim();
+        if (!message) return;
+
+        // UI Updates for user message
+        appendMessage(message, "user");
+        chatInput.value = "";
+        chatInput.disabled = true;
+
+        // Update conversation History
+        chatHistory.push({ role: "user", parts: [{ text: message }] });
+
+        toggleLoading(true);
+
+        // API Payload setup for Gemini
+        const apiKey = ""; // API key is provided at runtime in this environment
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+        const payload = {
+          contents: chatHistory,
+          systemInstruction: {
+            parts: [{ text: getSystemPrompt() }],
+          },
+        };
+
+        try {
+          const response = await fetchWithRetry(apiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+
+          const data = await response.json();
+
+          if (data.candidates && data.candidates.length > 0) {
+            const botResponse = data.candidates[0].content.parts[0].text;
+            // Store model response in history to maintain context
+            chatHistory.push({ role: "model", parts: [{ text: botResponse }] });
+            appendMessage(botResponse, "bot");
+          } else {
+            throw new Error("No valid response from model.");
+          }
+        } catch (error) {
+          console.error("Chat error:", error);
+          appendMessage(
+            "I'm sorry, I'm having a little trouble connecting right now. Please try asking again or click the WhatsApp button to chat directly with our team!",
+            "bot",
+          );
+        } finally {
+          toggleLoading(false);
+          chatInput.disabled = false;
+          chatInput.focus();
+        }
+      });
+    </script>
+  </body>
+</html>
